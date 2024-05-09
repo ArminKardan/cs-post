@@ -17,6 +17,7 @@ public class Utilities
     {
         try
         {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             var request = (HttpWebRequest)WebRequest.Create(url);
             request.Timeout = 20000;
             request.Method = "POST";
